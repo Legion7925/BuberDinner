@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>75eaace1-b9aa-4eaf-a13c-a8529b2c0b35</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="Mapster.DependencyInjection" Version="1.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BubberDinner.Application\BubberDinner.Application.csproj" />
+    <ProjectReference Include="..\BubberDinner.Infrastructure\BubberDinner.Infrastructure.csproj" />
+    <ProjectReference Include="..\BubberDinnerContracts\BubberDinner.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
