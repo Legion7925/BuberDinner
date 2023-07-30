@@ -3,8 +3,10 @@ using BubberDinner.Application.Common.Interfaces.Persistence;
 using BubberDinner.Application.Common.Interfaces.Services;
 using BubberDinner.Infrastructure.Authentication;
 using BubberDinner.Infrastructure.Persistence;
+using BubberDinner.Infrastructure.Persistence.Repositories;
 using BubberDinner.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
@@ -18,9 +20,16 @@ public static class IServiceCollectionExtensions
     public static void AddInfrastructureLayer(this IServiceCollection services, ConfigurationManager configuration)
     {
         services.AddAuthServices(configuration);
+        services.AddPersistence();
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
+    }
 
+    private static void AddPersistence(this IServiceCollection services)
+    {
+        services.AddDbContext<BubberDinnerDbContext>(options =>
+            options.UseSqlServer());
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IMenuRepository, MenuRepository>();
     }
 
     private static void AddAuthServices(this IServiceCollection services, ConfigurationManager configuration)

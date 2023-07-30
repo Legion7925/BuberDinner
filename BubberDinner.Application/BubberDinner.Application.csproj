@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <Folder Include="Common\Errors\" />
+    <Folder Include="Menus\Queries\" />
   </ItemGroup>
 
 </Project>
