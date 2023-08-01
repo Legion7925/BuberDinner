@@ -8,7 +8,7 @@ using BubberDinner.Domain.User.ValueObjects;
 
 namespace BubberDinner.Domain.Guest;
 
-public sealed class Guest : AggregateRoot<GuestId>
+public sealed class Guest : AggregateRoot<GuestId , Guid>
 {
     public Guest(GuestId id,
                 UserId userId,

@@ -7,7 +7,7 @@ using BubberDinner.Domain.Host.ValueObjects;
 
 namespace BubberDinner.Domain.Bill;
 
-public sealed class Bill : AggregateRoot<BillId>
+public sealed class Bill : AggregateRoot<BillId, Guid>
 {
     public Bill(BillId id,
                 HostId hostId,

@@ -2,13 +2,13 @@
 
 namespace BubberDinner.Domain.MenuReview.ValueObjects;
 
-public sealed class MenuReviewId : ValueObject
+public sealed class MenuReviewId : AggregateRootId<Guid>
 {
     public MenuReviewId()
     {
     }
 
-    public Guid Value { get; private set; }
+    public override Guid Value { get; protected set; }
 
     public MenuReviewId(Guid value)
     {

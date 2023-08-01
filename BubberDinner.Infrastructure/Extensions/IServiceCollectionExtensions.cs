@@ -3,6 +3,7 @@ using BubberDinner.Application.Common.Interfaces.Persistence;
 using BubberDinner.Application.Common.Interfaces.Services;
 using BubberDinner.Infrastructure.Authentication;
 using BubberDinner.Infrastructure.Persistence;
+using BubberDinner.Infrastructure.Persistence.Interceptors;
 using BubberDinner.Infrastructure.Persistence.Repositories;
 using BubberDinner.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -20,16 +21,17 @@ public static class IServiceCollectionExtensions
     public static void AddInfrastructureLayer(this IServiceCollection services, ConfigurationManager configuration)
     {
         services.AddAuthServices(configuration);
-        services.AddPersistence();
+        services.AddPersistence(configuration);
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
     }
 
-    private static void AddPersistence(this IServiceCollection services)
+    private static void AddPersistence(this IServiceCollection services, ConfigurationManager configuration)
     {
         services.AddDbContext<BubberDinnerDbContext>(options =>
-            options.UseSqlServer());
+            options.UseSqlServer(configuration["ConnectionStrings:LocalConnectionString"]));
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IMenuRepository, MenuRepository>();
+        services.AddScoped<PublishDomainEventsInterceptor>();
     }
 
     private static void AddAuthServices(this IServiceCollection services, ConfigurationManager configuration)
@@ -46,7 +48,7 @@ public static class IServiceCollectionExtensions
             {
                 ValidateIssuer = true,
                 ValidateAudience = true,
-                ValidateLifetime = true, 
+                ValidateLifetime = true,
                 ValidateIssuerSigningKey = true,
                 ValidIssuer = jwtSettings.Issuer,
                 ValidAudience = jwtSettings.Audience,

@@ -1,14 +1,14 @@
 ﻿using BubberDinner.Domain.Common.Models;
 
-namespace BubberDinner.Domain.Menu.ValueObjects;
+namespace BubberDinner.Domain.MenuAggregate.ValueObjects;
 
-public sealed class MenuId : ValueObject
+public sealed class MenuId : AggregateRootId<Guid>
 {
     public MenuId()
     {
     }
 
-    public Guid Value { get; private set; }
+    public override Guid Value { get; protected set; }
 
     public MenuId(Guid value)
     {

@@ -5,11 +5,11 @@ using BubberDinner.Domain.Dinner.Entities;
 using BubberDinner.Domain.Dinner.Enums;
 using BubberDinner.Domain.Dinner.ValueObjects;
 using BubberDinner.Domain.Host.ValueObjects;
-using BubberDinner.Domain.Menu.ValueObjects;
+using BubberDinner.Domain.MenuAggregate.ValueObjects;
 
 namespace BubberDinner.Domain.Dinner;
 
-public sealed class Dinner : AggregateRoot<DinnerId>
+public sealed class Dinner : AggregateRoot<DinnerId, Guid>
 {
 
 #pragma warning disable CS8618

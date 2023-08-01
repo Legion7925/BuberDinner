@@ -1,11 +1,11 @@
 ﻿using BubberDinner.Domain.Common.Models;
-using BubberDinner.Domain.Menu.ValueObjects;
+using BubberDinner.Domain.MenuAggregate.ValueObjects;
 
 namespace BubberDinner.Domain.User.ValueObjects;
 
-public sealed class UserId : ValueObject
+public sealed class UserId : AggregateRootId<Guid>
 {
-    public Guid Value { get; private set; }
+    public override Guid Value { get; protected set; }
 
     public UserId(Guid value)
     {
@@ -20,5 +20,10 @@ public sealed class UserId : ValueObject
     public override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;
+    }
+
+    public static UserId Create(Guid value)
+    {
+        return new(value);
     }
 }

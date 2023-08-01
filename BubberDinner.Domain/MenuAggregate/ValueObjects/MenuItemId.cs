@@ -1,6 +1,6 @@
 ﻿using BubberDinner.Domain.Common.Models;
 
-namespace BubberDinner.Domain.Menu.ValueObjects;
+namespace BubberDinner.Domain.MenuAggregate.ValueObjects;
 
 public sealed class MenuItemId : ValueObject
 {

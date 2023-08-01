@@ -2,13 +2,14 @@
 using BubberDinner.Domain.Common.ValueObjects;
 using BubberDinner.Domain.Dinner.ValueObjects;
 using BubberDinner.Domain.Host.ValueObjects;
-using BubberDinner.Domain.Menu.Entities;
-using BubberDinner.Domain.Menu.ValueObjects;
+using BubberDinner.Domain.MenuAggregate.Entities;
+using BubberDinner.Domain.MenuAggregate.Events;
+using BubberDinner.Domain.MenuAggregate.ValueObjects;
 using BubberDinner.Domain.MenuReview.ValueObjects;
 
-namespace BubberDinner.Domain.Menu;
+namespace BubberDinner.Domain.MenuAggregate;
 
-public sealed class Menu : AggregateRoot<MenuId>
+public sealed class Menu : AggregateRoot<MenuId , Guid>
 {
     private Menu(MenuId id,
                 HostId hostId,
@@ -50,7 +51,7 @@ public sealed class Menu : AggregateRoot<MenuId>
                               HostId hostId,
                               List<MenuSection>? sections)
     {
-        return new Menu(MenuId.CreateUnique(),
+       var menu = new Menu(MenuId.CreateUnique(),
                         hostId,
                         name,
                         description,
@@ -58,6 +59,10 @@ public sealed class Menu : AggregateRoot<MenuId>
                         DateTime.UtcNow,
                         AverageRating.CreateNew(),
                         sections ?? new());
+
+        menu.AddDomainEvent(new MenuCreated(menu));
+
+        return menu;
     }
 
 #pragma warning disable CS8618

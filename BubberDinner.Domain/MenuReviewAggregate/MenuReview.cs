@@ -2,12 +2,12 @@
 using BubberDinner.Domain.Dinner.ValueObjects;
 using BubberDinner.Domain.Guest.ValueObjects;
 using BubberDinner.Domain.Host.ValueObjects;
-using BubberDinner.Domain.Menu.ValueObjects;
+using BubberDinner.Domain.MenuAggregate.ValueObjects;
 using BubberDinner.Domain.MenuReview.ValueObjects;
 
 namespace BubberDinner.Domain.MenuReview;
 
-public sealed class MenuReview : AggregateRoot<MenuReviewId>
+public sealed class MenuReview : AggregateRoot<MenuReviewId, Guid>
 {
 #pragma warning disable CS8618 
     public MenuReview()
