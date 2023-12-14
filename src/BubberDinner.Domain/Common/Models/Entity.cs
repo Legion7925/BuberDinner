@@ -3,8 +3,9 @@
 public abstract class Entity<TId> : IEquatable<Entity<TId>> , IHasDomainEvents
     where TId : notnull
 {
-    private readonly List<IDomainEvent> _domainEvents =new();
     public TId Id { get; protected set; }
+
+    private readonly List<IDomainEvent> _domainEvents =new();
 
     public IReadOnlyList<IDomainEvent> DomainEvents => _domainEvents.AsReadOnly();
 

@@ -5,35 +5,34 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9A61D14C-5CE3-4D90-9B84-656F4692B28D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubberDinner.Api", "src\BubberDinner.Api\BubberDinner.Api.csproj", "{3F275BB5-72CD-4DA4-B03C-AAE3A510A7BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BubberDinner.Api", "src\BubberDinner.Api\BubberDinner.Api.csproj", "{3F275BB5-72CD-4DA4-B03C-AAE3A510A7BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubberDinner.Application", "src\BubberDinner.Application\BubberDinner.Application.csproj", "{F7F160C0-C935-4892-8B9F-3B171A6C9FD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BubberDinner.Application", "src\BubberDinner.Application\BubberDinner.Application.csproj", "{F7F160C0-C935-4892-8B9F-3B171A6C9FD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubberDinner.Domain", "src\BubberDinner.Domain\BubberDinner.Domain.csproj", "{B4910403-384B-4673-A340-AC97FF00C174}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BubberDinner.Domain", "src\BubberDinner.Domain\BubberDinner.Domain.csproj", "{B4910403-384B-4673-A340-AC97FF00C174}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubberDinner.Infrastructure", "src\BubberDinner.Infrastructure\BubberDinner.Infrastructure.csproj", "{AC918485-CDC1-410B-8385-8869917C85DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BubberDinner.Infrastructure", "src\BubberDinner.Infrastructure\BubberDinner.Infrastructure.csproj", "{AC918485-CDC1-410B-8385-8869917C85DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubberDinner.Contracts", "src\BubberDinnerContracts\BubberDinner.Contracts.csproj", "{745FCB65-D000-4634-B3E7-337D6AC67692}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BubberDinner.Contracts", "src\BubberDinnerContracts\BubberDinner.Contracts.csproj", "{745FCB65-D000-4634-B3E7-337D6AC67692}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{25490F56-37C5-424F-924E-2CB8DB957E9C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{EA74D348-12FF-40A8-9223-C93D79F1973F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubberDinner.Api.UnitTests", "tests\UnitTests\BubberDinner.Api.UnitTests\BubberDinner.Api.UnitTests.csproj", "{257ACDED-D19D-4CD3-B86F-5912532B6DF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BubberDinner.Api.UnitTests", "tests\UnitTests\BubberDinner.Api.UnitTests\BubberDinner.Api.UnitTests.csproj", "{257ACDED-D19D-4CD3-B86F-5912532B6DF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubberDinner.Application.UnitTests", "tests\UnitTests\BubberDinner.Application.UnitTests\BubberDinner.Application.UnitTests.csproj", "{2776CCBD-ACE8-4438-B755-6FE6B564CC2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BubberDinner.Application.UnitTests", "tests\UnitTests\BubberDinner.Application.UnitTests\BubberDinner.Application.UnitTests.csproj", "{2776CCBD-ACE8-4438-B755-6FE6B564CC2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubberDinner.Domain.UnitTests", "tests\UnitTests\BubberDinner.Domain.UnitTests\BubberDinner.Domain.UnitTests.csproj", "{35F8BDFB-7417-4542-8E87-34C3E923E988}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BubberDinner.Domain.UnitTests", "tests\UnitTests\BubberDinner.Domain.UnitTests\BubberDinner.Domain.UnitTests.csproj", "{35F8BDFB-7417-4542-8E87-34C3E923E988}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubberDinner.Infrastructure.UnitTests", "tests\UnitTests\BubberDinner.Infrastructure.UnitTests\BubberDinner.Infrastructure.UnitTests.csproj", "{DCD22D3F-AC9D-4808-9FFC-C1838E5285E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BubberDinner.Infrastructure.UnitTests", "tests\UnitTests\BubberDinner.Infrastructure.UnitTests\BubberDinner.Infrastructure.UnitTests.csproj", "{DCD22D3F-AC9D-4808-9FFC-C1838E5285E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubberDinner.ArchitectureTests", "BubberDinner.ArchitectureTests\BubberDinner.ArchitectureTests.csproj", "{B45E83FC-5D0E-40C4-A8AC-E5E8431F4955}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{3F275BB5-72CD-4DA4-B03C-AAE3A510A7BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -72,6 +71,13 @@ Global
 		{DCD22D3F-AC9D-4808-9FFC-C1838E5285E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCD22D3F-AC9D-4808-9FFC-C1838E5285E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCD22D3F-AC9D-4808-9FFC-C1838E5285E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B45E83FC-5D0E-40C4-A8AC-E5E8431F4955}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B45E83FC-5D0E-40C4-A8AC-E5E8431F4955}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B45E83FC-5D0E-40C4-A8AC-E5E8431F4955}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B45E83FC-5D0E-40C4-A8AC-E5E8431F4955}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3F275BB5-72CD-4DA4-B03C-AAE3A510A7BD} = {9A61D14C-5CE3-4D90-9B84-656F4692B28D}
@@ -84,5 +90,6 @@ Global
 		{2776CCBD-ACE8-4438-B755-6FE6B564CC2B} = {EA74D348-12FF-40A8-9223-C93D79F1973F}
 		{35F8BDFB-7417-4542-8E87-34C3E923E988} = {EA74D348-12FF-40A8-9223-C93D79F1973F}
 		{DCD22D3F-AC9D-4808-9FFC-C1838E5285E0} = {EA74D348-12FF-40A8-9223-C93D79F1973F}
+		{B45E83FC-5D0E-40C4-A8AC-E5E8431F4955} = {EA74D348-12FF-40A8-9223-C93D79F1973F}
 	EndGlobalSection
 EndGlobal
